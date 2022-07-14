@@ -1,5 +1,4 @@
-Hierarchal Deterministic Utilities (BIP32)
-==========================================
+# Hierarchal Deterministic Utilities (BIP32)
 
 This sub-module is part of the [ethers project](https://github.com/ethers-io/ethers.js).
 
@@ -8,33 +7,28 @@ private keys.
 
 For more information, see the [documentation](https://docs.ethers.io/v5/api/utils/hdnode/).
 
-Importing
----------
+## Importing
 
 Most users will prefer to use the [umbrella package](https://www.npmjs.com/package/ethers),
 but for those with more specific needs, individual components can be imported.
 
 ```javascript
 const {
+  HDNode,
 
-    HDNode,
+  defaultPath,
 
-    defaultPath,
+  mnemonicToSeed,
+  mnemonicToEntropy,
+  entropyToMnemonic,
+  isValidMnemonic,
 
-    mnemonicToSeed,
-    mnemonicToEntropy,
-    entropyToMnemonic,
-    isValidMnemonic,
+  // Types
 
-    // Types
-
-    Mnemonic
-
+  Mnemonic,
 } = require("@ethersproject/hdnode");
 ```
 
-
-License
--------
+## License
 
 MIT License
