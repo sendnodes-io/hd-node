@@ -1,0 +1,56 @@
+{
+  "authors": [
+    "Dire <dire@sendnodes.io>",
+    "BigBoss <bigboss@sendnodes.io>"
+  ],
+  "devDependencies": {
+    "dts-cli": "^0.19.2"
+  },
+  "dependencies": {
+    "@ethersproject/abstract-signer": "^5.4.0",
+    "@ethersproject/basex": "^5.4.0",
+    "@ethersproject/bignumber": "^5.4.0",
+    "@ethersproject/bytes": "^5.4.0",
+    "@ethersproject/logger": "^5.4.0",
+    "@ethersproject/pbkdf2": "^5.4.0",
+    "@ethersproject/properties": "^5.4.0",
+    "@ethersproject/sha2": "^5.4.0",
+    "@ethersproject/signing-key": "^5.4.0",
+    "@ethersproject/strings": "^5.4.0",
+    "@ethersproject/transactions": "^5.4.0",
+    "@ethersproject/wordlists": "^5.4.0",
+    "@pokt-network/pocket-js": "git+ssh://git@github.com:sendnodes-io/pocket-js.git#66a271281c1b6a486f342df573abe68531d72cb3",
+    "@types/elliptic": "6.4.14",
+    "bn.js": "^4.11.9",
+    "ed25519-hd-key": "1.2.0",
+    "elliptic": "6.5.4",
+    "hash.js": "1.1.7",
+    "libsodium-wrappers": "^0.7.10",
+    "tweetnacl": "1.0.3"
+  },
+  "description": "BIP32 Hierarchal Deterministic Node operations.",
+  "keywords": [
+    "Ethereum",
+    "ethers"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/hd-node.esm.js",
+  "name": "@sendnodes/hd-node",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sendnodes-io/hd-node.git"
+  },
+  "scripts": {
+    "build": "dts build --tsconfig ./tsconfig.json",
+    "watch": "dts watch --tsconfig ./tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
+  },
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "version": "5.4.0"
+}
