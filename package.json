@@ -50,7 +50,8 @@
     "build": "dts build --tsconfig ./tsconfig.json",
     "watch": "dts watch --tsconfig ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepack": "npm run build"
   },
   "sideEffects": false,
   "types": "./dist/index.d.ts",
