@@ -12,7 +12,7 @@ import { pbkdf2 } from "@ethersproject/pbkdf2";
 import { defineReadOnly } from "@ethersproject/properties";
 import { sha256 } from "@ethersproject/sha2";
 import { Wordlist, wordlists } from "@ethersproject/wordlists";
-import { addressFromPublickey } from "@pokt-network/pocket-js/dist/index"
+import { addressFromPublickey } from "./utils";
 import { getMasterKeyFromSeed, getPublicKey, derivePath } from "ed25519-hd-key"
 import aesjs from "aes-js"
 import nacl from "tweetnacl"
@@ -121,8 +121,7 @@ export class HDNode implements ExternallyOwnedAccount {
 
         defineReadOnly(this, "parentFingerprint", parentFingerprint);
         defineReadOnly(this, "fingerprint", computeFingerprint(this.publicKey));
-        const addr = addressFromPublickey(Buffer.from(this.publicKey, "hex"))
-        defineReadOnly(this, "address", addr.toString("hex"));
+        defineReadOnly(this, "address", addressFromPublickey(this.publicKey));
         defineReadOnly(this, "chainCode", chainCode);
 
         defineReadOnly(this, "index", index);
